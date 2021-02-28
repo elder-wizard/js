@@ -33,6 +33,26 @@ function BinarySearch(item, array) {
     return position;
 }
 
-console.log(`Index: ${BinarySearch(31, array)}, Iterations: ${count}`);
+// console.log(`Index: ${BinarySearch(31, array)}, Iterations: ${count}`);
 
 // logarithmic time in the worst case: O(log n)
+
+
+// Recursive functon
+
+function RecursiveBinarySearch(item, array, start, end) {
+    let middle = Math.floor( (start + end) / 2 );
+    count++;
+    if (item === array[middle]) {
+        return middle;
+    }
+    debugger
+    if(item < array[middle]) {
+        return RecursiveBinarySearch(item, array, start, middle -1);
+    } else {
+        return RecursiveBinarySearch(item, array, middle +1, end);
+    }
+    
+}
+
+console.log(`Index: ${RecursiveBinarySearch(22, array, 0, array.length)}, Iterations: ${count}`);

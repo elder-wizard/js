@@ -3,7 +3,7 @@ const arr = [31, 5, 6, 22, 11, 4, 3, 14, 25, 0, 2];
 let count = 0;
 
 function QuickSort(array) {
-    debugger;
+    // debugger;
     if (array.length <= 1) {
         return array;
     }
